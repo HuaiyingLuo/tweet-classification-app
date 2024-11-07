@@ -12,10 +12,12 @@ In this project, we will build a tweet classification app using a machine learni
 
 ## Setup
 
+Add /data to .gitignore
+
 Set up a conda environment in mle-dev with the following command:
 
 ```
-cd ml-dev
+cd ..
 conda create -n nlp python=3.9
 conda activate nlp
 ```
@@ -27,14 +29,26 @@ conda install jupyter ipykernel
 ipython kernel install --user --name=nlp
 conda install scikit-learn
 conda install nltk
+pip install nltk
 conda install pandas
 conda install numpy
 ```
 
+Install Flask:
 
-pip install -r requirements.txt
+```
+pip install flask
 ```
 
+To test the POST endpoint, open a new terminal and run:
+
+```
+curl -X POST -H "Content-Type: application/json" -d '{"text": "May the Force be with you."}' 0.0.0.0:5001/predict 
+```
+
+```
+curl -X POST -H "Content-Type: application/json" -d '{"text": "I hate Twitter."}' 0.0.0.0:5001/predict 
+```
 
 ## About the Dataset
 

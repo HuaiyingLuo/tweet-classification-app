@@ -95,7 +95,7 @@ def predict(model, text):
     # Make a list of text with sentiment.
     data = []
     for t, pred in zip(text, predictions):
-        data.append((t, pred, pred_to_label[pred]))
+        data.append({'text': t, 'pred':int(pred), 'label':pred_to_label[pred]})
 
     return data
 

@@ -1,0 +1,5 @@
+scikit-learn==1.5.1
+nltk==3.9.1
+flask==3.0.3
+# command to download nltk data
+# "import nltk; nltk.download('omw-1.4'); nltk.download('wordnet')"
